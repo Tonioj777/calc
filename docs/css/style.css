@@ -1,0 +1,161 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0e1538;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 30px;
+  border-radius: 15px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+  max-width: 900px;
+  width: 100%;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Два столбца */
+  gap: 45px; /* Расстояние между элементами */
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+input {
+  width: 85%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background: #f9f9f9;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #2e7d32;
+  outline: none;
+  box-shadow: 0 0 8px 1px rgba(17, 215, 43, 0.3);
+}
+.input__diff {
+  width: 93%;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 14px;
+  width: 96%;
+  background: linear-gradient(135deg, #4caf50, #2e7d32); /* Зеленый градиент */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+button:hover {
+  /* background: linear-gradient(135deg, #d32f2f, #ff4b4b); */
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+.reset-button {
+  margin-top: 25px;
+  padding: 14px;
+  width: 96%;
+  color: white;
+  background: linear-gradient(135deg, #ff4b4b, #d32f2f);
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+.reset-button:hover {
+    transform: translateY(2px);
+}
+.result {
+  margin-top: 25px;
+  padding: 15px;
+  background: transparent;
+  border-radius: 8px;
+  color: #afa8a8;
+  font-size: 16px;
+  text-align: center;
+  width: 93%;
+}
+/* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  .input-grid {
+    gap: 5px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+  }
+
+  input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .reset-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .result {
+    font-size: 12px;
+  }
+  .input__diff {
+    width: 85%;
+  }
+}
