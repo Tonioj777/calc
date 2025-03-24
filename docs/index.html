@@ -58,14 +58,22 @@
       </div>
     </div>
 
-    <label for="area">Площадь квадрата (м²):</label>
-    <input class="input__diff" type="number" step="0.01" id="area" placeholder="Введите площадь">
 
-    <label for="people">Количество человек:</label>
-    <input class="input__diff" type="number" step="1" id="people" placeholder="Введите количество">
-
-    <button class="btn" onclick="calculate()">Рассчитать</button>
-    <button class="reset-button" onclick="reset()">Сбросить значения</button>
+    <div class="inline-inputs">
+      <div>
+        <label for="area">Площадь квадрата (м²):</label>
+        <input type="number" step="0.01" id="area" placeholder="Введите площадь">
+      </div>
+      <div>
+        <label for="people">Количество человек:</label>
+        <input type="number" step="1" id="people" placeholder="Введите количество">
+      </div>
+    </div>
+    
+    <div class="button-group">
+      <button class="button" onclick="calculate()">Рассчитать</button>
+      <button class="reset-button" onclick="resetForm()">Сбросить</button>
+    </div>
 
 
     <div class="result" id="result"></div>
