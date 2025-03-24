@@ -1,3 +1,118 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+input[type="file"] {
+  max-width: 100%;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #0e1538;
@@ -33,19 +148,31 @@ body {
 
 .input-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Два столбца */
+  grid-template-columns: 1fr 1fr 1fr; /* Два столбца */
   gap: 45px; /* Расстояние между элементами */
+}
+.inline-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
 }
 
 label {
   display: block;
   margin-top: 15px;
   color: white;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 input {
-  width: 85%;
+  width: 100%;
   padding: 12px;
   margin-top: 8px;
   border: 1px solid #ddd;
@@ -67,11 +194,10 @@ input:focus {
   width: 93%;
 }
 
-.btn {
-  margin-top: 25px;
+button {
+  flex: 1;
   padding: 14px;
-  width: 96%;
-  background: linear-gradient(135deg, #4caf50, #2e7d32); /* Зеленый градиент */
+  background-color: #2e7d32;
   color: white;
   border: none;
   border-radius: 8px;
@@ -91,12 +217,11 @@ button:active {
   transform: translateY(0);
 }
 .reset-button {
-  margin-top: 25px;
+  
   padding: 14px;
   width: 96%;
   color: white;
   background: linear-gradient(135deg, #ff4b4b, #d32f2f);
-  margin-top: 10px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -106,7 +231,7 @@ button:active {
     transform 0.2s ease;
 }
 .reset-button:hover {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 .result {
   margin-top: 25px;
@@ -119,7 +244,7 @@ button:active {
   width: 93%;
 }
 /* Адаптация для мобильных устройств */
-@media (max-width: 480px) {
+@media (max-width: 535px) {
   .container {
     padding: 15px;
   }
@@ -143,7 +268,7 @@ button:active {
     font-size: 12px;
   }
 
-  .btn {
+  .button{
     padding: 10px;
     font-size: 14px;
   }
