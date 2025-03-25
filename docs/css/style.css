@@ -1,0 +1,287 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+input[type="file"] {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: #0e1538;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 30px;
+  border-radius: 15px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+  max-width: 900px;
+  width: 100%;
+}
+/* 
+.heading {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  margin-bottom: 20px;
+} */
+
+.title {
+  margin-top: -30px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Два столбца */
+  gap: 30px; /* Расстояние между элементами */
+}
+.inline-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: white;
+  font-size: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background: #f9f9f9;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #2e7d32;
+  outline: none;
+  box-shadow: 0 0 8px 1px rgba(17, 215, 43, 0.3);
+}
+
+
+button {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+button:hover {
+  /* background: linear-gradient(135deg, #d32f2f, #ff4b4b); */
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+.reset-button {
+  padding: 10px;
+  width: 100%;
+  color: white;
+  background: linear-gradient(135deg, #ff4b4b, #d32f2f);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+.reset-button:hover {
+  transform: translateY(2px);
+}
+.result {
+  margin-top: 25px;
+  padding: 15px;
+  background: #4c768e3d;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}
+/* Адаптация для мобильных устройств */
+@media (max-width: 535px) {
+  .container {
+    padding: 15px;
+  }
+  .input-grid {
+    gap: 5px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+  }
+
+  input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .reset-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .result {
+    font-size: 12px;
+  }
+  .input__diff {
+    width: 85%;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор кубатуры</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- <h1 class="heading">Калькулятор кубатуры</h1> -->
+    <h3 class="title">Введите данные нивелировок:</h3>
+    <div class="input-grid">
+      <!-- Точки A и B -->
+      <div>
+        <label for="upperA">Верхняя точка A:</label>
+        <input type="number" step="0.01" id="upperA" placeholder="Введите значение">
+        <label for="lowerA">Нижняя точка A:</label>
+        <input type="number" step="0.01" id="lowerA" placeholder="Введите значение">
+      </div>
+      <div>
+        <label for="upperB">Верхняя точка B:</label>
+        <input type="number" step="0.01" id="upperB" placeholder="Введите значение">
+        <label for="lowerB">Нижняя точка B:</label>
+        <input type="number" step="0.01" id="lowerB" placeholder="Введите значение">
+      </div>
+
+      <!-- Точки C и D -->
+      <div>
+        <label for="upperC">Верхняя точка C:</label>
+        <input type="number" step="0.01" id="upperC" placeholder="Введите значение">
+        <label for="lowerC">Нижняя точка C:</label>
+        <input type="number" step="0.01" id="lowerC" placeholder="Введите значение">
+      </div>
+      <div>
+        <label for="upperD">Верхняя точка D:</label>
+        <input type="number" step="0.01" id="upperD" placeholder="Введите значение">
+        <label for="lowerD">Нижняя точка D:</label>
+        <input type="number" step="0.01" id="lowerD" placeholder="Введите значение">
+      </div>
+
+      <!-- Точки E и F -->
+      <div>
+        <label for="upperE">Верхняя точка E:</label>
+        <input type="number" step="0.01" id="upperE" placeholder="Введите значение">
+        <label for="lowerE">Нижняя точка E:</label>
+        <input type="number" step="0.01" id="lowerE" placeholder="Введите значение">
+      </div>
+      <div>
+        <label for="upperF">Верхняя точка F:</label>
+        <input type="number" step="0.01" id="upperF" placeholder="Введите значение">
+        <label for="lowerF">Нижняя точка F:</label>
+        <input type="number" step="0.01" id="lowerF" placeholder="Введите значение">
+      </div>
+    </div>
+
+
+    <div class="inline-inputs">
+      <div>
+        <label for="area">Площадь квадрата (м²):</label>
+        <input type="number" step="0.01" id="area" placeholder="Введите площадь">
+      </div>
+      <div>
+        <label for="people">Количество человек:</label>
+        <input type="number" step="1" id="people" placeholder="Введите количество">
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button class="button" onclick="calculate()">Рассчитать</button>
+      <button class="reset-button" onclick="resetForm()">Сбросить</button>
+    </div>
+    <div class="result" id="result"></div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
